@@ -3,8 +3,9 @@
 
 @{
   ViewBag.Title = "Reflexica UI";
-  //Layout = "~/Views/Shared/_Layout.cshtml";
+  Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 
 <style type="text/css">
   #dropZone {
@@ -18,31 +19,65 @@
 </style>
 
 <script type="text/javascript">
-    $(function () {
-        $('#dropZone').filedrop({
-            url: '@Url.Action("UploadFiles")',
-            paramname: 'files',
-            maxFiles: 5,
-            dragOver: function () {
-                $('#dropZone').css('background', 'blue');
-            },
-            dragLeave: function () {
-                $('#dropZone').css('background', 'gray');
-            },
-            drop: function () {
-                $('#dropZone').css('background', 'gray');
-            },
-            afterAll: function () {
-                $('#dropZone').html('The file(s) have been uploaded successfully!');
-            },
-            uploadFinished: function (i, file, response, time) {
-                $('#uploadResult').append('<li>' + file.name + '</li>');
-            }
-        });
+  $(function() {
+    $('#dropZone').filedrop({
+      url: '@Url.Action("UploadFiles")',
+      paramname: 'files',
+      maxFiles: 5,
+      dragOver: function() {
+        $('#dropZone').css('background', 'blue');
+      },
+      dragLeave: function() {
+        $('#dropZone').css('background', 'gray');
+      },
+      drop: function() {
+        $('#dropZone').css('background', 'gray');
+      },
+      afterAll: function() {
+        $('#dropZone').html('The file(s) have been uploaded successfully!');
+      },
+      uploadFinished: function(i, file, response, time) {
+        $('#uploadResult').append('<li>' + file.name + '</li>');
+      }
     });
-</script>
+  });
 
-<div id="dropZone">Drop your files here</div>
+  $(':radio[name=Text]').select(function () {
+    var value = $(this).filter(':checked').value();
+    if (value == '1') {
+      $('.Input').show();
+      $('.dropZone').hide();
+    } else if (value == '2') {
+      $('.Input').hide();
+      $('.dropZone').show();
+    }
+  });
+</script>
+@*$(document).ready(function() {*@
+@*$(':radio[name=Text]').ready(function() {
+    var value = $(this).filter(':checked').value();
+    if (value == '1') {
+      $('.Input').show();
+      $('.dropZone').hide();
+    } else if (value == '2') {
+      $('.Input').hide();
+      $('.dropZone').show();
+    }
+  });*@
+@*});*@
+
+<div id="TextDiv">Select below of one option to process reference<br/>
+  Insert Reference Text : @Html.RadioButton("Text", "1")
+  Drop Files                  : @Html.RadioButton("Text","2")
+</div>
+<br/>
+
+<div id="Input" hidden="True">
+  @Html.TextArea("TextReference")
+</div>
+<br/>
+
+<div id="dropZone" hidden="True">Drop your files here</div>
 <br>
 
 <div id="Output Format">
@@ -77,3 +112,4 @@
     <input type="submit" name="Submit" value="Submit"/>
   }
 </div>
+<div id="Show"></div>
