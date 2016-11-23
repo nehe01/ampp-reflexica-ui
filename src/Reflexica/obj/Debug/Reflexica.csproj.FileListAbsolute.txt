@@ -1,0 +1,15 @@
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Reflexica.dll.config
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Reflexica.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Reflexica.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Mvc.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Webpages.Deployment.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Webpages.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Webpages.Razor.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Webpages.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Webpages.Deployment.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Webpages.Razor.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Mvc.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Razor.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Razor.xml

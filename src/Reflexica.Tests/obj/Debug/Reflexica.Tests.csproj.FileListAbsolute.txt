@@ -1,0 +1,17 @@
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\Reflexica.Tests.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\Reflexica.Tests.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\Reflexica.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.Mvc.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.WebPages.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\Reflexica.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.Mvc.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.WebPages.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\obj\Debug\Reflexica.Tests.csprojResolveAssemblyReference.cache
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\obj\Debug\Reflexica.Tests.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\obj\Debug\Reflexica.Tests.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.Razor.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica.Tests\bin\Debug\System.Web.Razor.xml

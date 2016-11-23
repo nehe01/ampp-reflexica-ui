@@ -1,0 +1,79 @@
+﻿@using System.Web.Mvc.Html
+@using Reflexica.Models
+
+@{
+  ViewBag.Title = "Reflexica UI";
+  //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+  #dropZone {
+    background: gray;
+    border: black dashed 3px;
+    width: 200px;
+    padding: 50px;
+    text-align: center;
+    color: white;
+  }
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        $('#dropZone').filedrop({
+            url: '@Url.Action("UploadFiles")',
+            paramname: 'files',
+            maxFiles: 5,
+            dragOver: function () {
+                $('#dropZone').css('background', 'blue');
+            },
+            dragLeave: function () {
+                $('#dropZone').css('background', 'gray');
+            },
+            drop: function () {
+                $('#dropZone').css('background', 'gray');
+            },
+            afterAll: function () {
+                $('#dropZone').html('The file(s) have been uploaded successfully!');
+            },
+            uploadFinished: function (i, file, response, time) {
+                $('#uploadResult').append('<li>' + file.name + '</li>');
+            }
+        });
+    });
+</script>
+
+<div id="dropZone">Drop your files here</div>
+<br>
+
+<div id="Output Format">
+  Select Output Format
+  <br/>
+  @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof (OutputFormat))))
+</div>
+<br/>
+<div id="Style">
+  Select Style
+  <br />
+  @Html.DropDownList("Styles", new SelectList(Enum.GetValues(typeof(Styles))))
+</div>
+<br />
+<div id="Customer">
+  Select Customer
+  <br />
+  @Html.DropDownList("Customers", new SelectList(Enum.GetValues(typeof(Customers))))
+</div>
+<br />
+<div id="Language">
+  Select Language
+  <br/>
+  @Html.DropDownList("Languages", new SelectList(Enum.GetValues(typeof (Languages))))
+</div>
+<br/>
+
+<div id="ReferenceProcessing">
+  Press Submit for Reference Processing
+  @using (Html.BeginForm())
+  {
+    <input type="submit" name="Submit" value="Submit"/>
+  }
+</div>
