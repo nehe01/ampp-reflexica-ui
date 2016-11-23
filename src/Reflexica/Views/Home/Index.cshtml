@@ -41,17 +41,6 @@
       }
     });
   });
-
-  $(':radio[name=Text]').select(function () {
-    var value = $(this).filter(':checked').value();
-    if (value == '1') {
-      $('.Input').show();
-      $('.dropZone').hide();
-    } else if (value == '2') {
-      $('.Input').hide();
-      $('.dropZone').show();
-    }
-  });
 </script>
 @*$(document).ready(function() {*@
 @*$(':radio[name=Text]').ready(function() {
@@ -66,9 +55,22 @@
   });*@
 @*});*@
 
+<script>
+  $(document).ready(function () {
+    $("#Insert").click(function () {
+      $("#Input").show();
+      $("#dropZone").hide();
+    });
+    $("#Drop").click(function () {
+      $("#Input").hide();
+      $("#dropZone").show();
+    });
+  });
+</script>
+
 <div id="TextDiv">Select below of one option to process reference<br/>
-  Insert Reference Text : @Html.RadioButton("Text", "1")
-  Drop Files                  : @Html.RadioButton("Text","2")
+  Insert Reference Text : @Html.RadioButton("Text", "1", new { id = "Insert"})
+  Drop Files                  : @Html.RadioButton("Text", "2", new { id = "Drop" })
 </div>
 <br/>
 
