@@ -13,3 +13,4 @@ D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Mvc.xml
 D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.WebPages.Deployment.xml
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.dll
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.csprojResolveAssemblyReference.cache

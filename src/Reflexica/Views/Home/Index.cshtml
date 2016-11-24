@@ -6,9 +6,9 @@
   Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="text-div">Select below of one option to process reference<br/>
-  Insert Reference Text : @Html.RadioButton("Text", "1", new { id = "insert-text"})
-  Drop Files                  : @Html.RadioButton("Text", "2", new { id = "drop-file" })
+<div id="text-div">Select below of one option to process references<br/>
+  @Html.RadioButton("Text", "1", new { id = "insert-text"}) Insert Reference Text
+  @Html.RadioButton("Text", "2", new { id = "drop-file" }) Drop Files
 </div>
 <br/>
 
@@ -29,35 +29,34 @@
 <br/>
 
 <div id="output-format">
-  Select Output Format
+  Output Format
   <br/>
   @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof (OutputFormat))), "Select Output Format")
 </div>
 <br/>
 
 <div id="style">
-  Select Style
+  Style
   <br />
   @Html.DropDownList("Styles", new SelectList(Enum.GetValues(typeof(Styles))), "Select Style")
 </div>
 <br/>
 
 <div id="customer">
-  Select Customer
+  Customer
   <br />
   @Html.DropDownList("Customers", new SelectList(Enum.GetValues(typeof(Customers))), "Select Customer")
 </div>
 <br/>
 
 <div id="language">
-  Select Language
+  Language
   <br/>
   @Html.DropDownList("Languages", new SelectList(Enum.GetValues(typeof (Languages))), "Select Language")
 </div>
 <br/>
 
 <div id="reference-processing">
-  Press Submit for Reference Processing
   @using (Html.BeginForm())
   {
     <input type="submit" name="Submit" value="Submit"/>
