@@ -6,78 +6,62 @@
   Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
-<div id="TextDiv">Select below of one option to process reference<br/>
-  Insert Reference Text : @Html.RadioButton("Text", "1", new { id = "Insert"})
-  Drop Files                  : @Html.RadioButton("Text", "2", new { id = "Drop" })
+<div id="text-div">Select below of one option to process reference<br/>
+  Insert Reference Text : @Html.RadioButton("Text", "1", new { id = "insert-text"})
+  Drop Files                  : @Html.RadioButton("Text", "2", new { id = "drop-file" })
 </div>
 <br/>
 
-<div id="Input" hidden="True">
-  @Html.TextArea("TextReference")
+<div id="input-text" hidden="True">
+  @Html.TextArea("TextReference", new { @class = "text-area" })
 </div>
 <br/>
 
-<div id="dropZone" hidden="True">Drop your files here</div>
+<div id="drop-area" hidden="True">
+  Drop your files here
+</div>
 <br>
-Uploaded Files:
-<ul id="uploadResult"></ul>
-<div id="Output Format">
+
+<div id="upload-file">
+  Uploaded Files:
+  <ul id="upload-result"></ul>
+</div>
+<br/>
+
+<div id="output-format">
   Select Output Format
   <br/>
-  @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof (OutputFormat))))
+  @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof (OutputFormat))), "Select Output Format")
 </div>
 <br/>
 
-<div id="Style">
+<div id="style">
   Select Style
   <br />
-  @Html.DropDownList("Styles", new SelectList(Enum.GetValues(typeof(Styles))))
-</div>
-<br />
-<div id="Customer">
-  Select Customer
-  <br />
-  @Html.DropDownList("Customers", new SelectList(Enum.GetValues(typeof(Customers))))
-</div>
-<br />
-<div id="Language">
-  Select Language
-  <br/>
-  @Html.DropDownList("Languages", new SelectList(Enum.GetValues(typeof (Languages))))
+  @Html.DropDownList("Styles", new SelectList(Enum.GetValues(typeof(Styles))), "Select Style")
 </div>
 <br/>
 
-<div id="ReferenceProcessing">
+<div id="customer">
+  Select Customer
+  <br />
+  @Html.DropDownList("Customers", new SelectList(Enum.GetValues(typeof(Customers))), "Select Customer")
+</div>
+<br/>
+
+<div id="language">
+  Select Language
+  <br/>
+  @Html.DropDownList("Languages", new SelectList(Enum.GetValues(typeof (Languages))), "Select Language")
+</div>
+<br/>
+
+<div id="reference-processing">
   Press Submit for Reference Processing
   @using (Html.BeginForm())
   {
     <input type="submit" name="Submit" value="Submit"/>
   }
 </div>
-<div id="Show"></div>
-<script type="text/javascript">
-    $(function () {
-        $('#dropZone').filedrop({
-            url: '@Url.Action("UploadFiles")',
-            paramname: 'files',
-            maxFiles: 5,
-            dragOver: function () {
-                $('#dropZone').css('background', 'blue');
-            },
-            dragLeave: function () {
-                $('#dropZone').css('background', 'gray');
-            },
-            drop: function () {
-                $('#dropZone').css('background', 'gray');
-            },
-            afterAll: function () {
-                $('#dropZone').html('The file(s) have been uploaded successfully!');
-            },
-            uploadFinished: function (i, file, response, time) {
-                $('#uploadResult').append('<li>' + file.name + '</li>');
-            }
-        });
-    });
-</script>
+
+<div id="show"></div>
