@@ -6,18 +6,6 @@
   Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<style type="text/css">
-  #dropZone {
-    background: gray;
-    border: black dashed 3px;
-    width: 200px;
-    padding: 50px;
-    text-align: center;
-    color: white;
-  }
-</style>
-
 <script type="text/javascript">
   $(function() {
     $('#dropZone').filedrop({
@@ -76,6 +64,7 @@
   @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof (OutputFormat))))
 </div>
 <br/>
+
 <div id="Style">
   Select Style
   <br />
