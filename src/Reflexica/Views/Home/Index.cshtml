@@ -6,43 +6,7 @@
   Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<script type="text/javascript">
-  $(function() {
-    $('#dropZone').filedrop({
-      url: '@Url.Action("UploadFiles")',
-      paramname: 'files',
-      maxFiles: 5,
-      dragOver: function() {
-        $('#dropZone').css('background', 'blue');
-      },
-      dragLeave: function() {
-        $('#dropZone').css('background', 'gray');
-      },
-      drop: function() {
-        $('#dropZone').css('background', 'gray');
-      },
-      afterAll: function() {
-        $('#dropZone').html('The file(s) have been uploaded successfully!');
-      },
-      uploadFinished: function(i, file, response, time) {
-        $('#uploadResult').append('<li>' + file.name + '</li>');
-      }
-    });
-  });
-</script>
 
-<script>
-  $(document).ready(function () {
-    $("#Insert").click(function () {
-      $("#Input").show();
-      $("#dropZone").hide();
-    });
-    $("#Drop").click(function () {
-      $("#Input").hide();
-      $("#dropZone").show();
-    });
-  });
-</script>
 
 <div id="TextDiv">Select below of one option to process reference<br/>
   Insert Reference Text : @Html.RadioButton("Text", "1", new { id = "Insert"})
@@ -57,7 +21,8 @@
 
 <div id="dropZone" hidden="True">Drop your files here</div>
 <br>
-
+Uploaded Files:
+<ul id="uploadResult"></ul>
 <div id="Output Format">
   Select Output Format
   <br/>
@@ -92,3 +57,27 @@
   }
 </div>
 <div id="Show"></div>
+<script type="text/javascript">
+    $(function () {
+        $('#dropZone').filedrop({
+            url: '@Url.Action("UploadFiles")',
+            paramname: 'files',
+            maxFiles: 5,
+            dragOver: function () {
+                $('#dropZone').css('background', 'blue');
+            },
+            dragLeave: function () {
+                $('#dropZone').css('background', 'gray');
+            },
+            drop: function () {
+                $('#dropZone').css('background', 'gray');
+            },
+            afterAll: function () {
+                $('#dropZone').html('The file(s) have been uploaded successfully!');
+            },
+            uploadFinished: function (i, file, response, time) {
+                $('#uploadResult').append('<li>' + file.name + '</li>');
+            }
+        });
+    });
+</script>
