@@ -1,4 +1,8 @@
-﻿#drop-area {
+﻿body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#drop-area {
     background: lightsteelblue;
     border: darkgray dotted 3px;
     width: 170px;
@@ -12,4 +16,9 @@
   width: 300px;
   padding: 10px;
   border: darkgray groove thin;
+}
+
+#reference-processing {
+  text-align: left;
+  color : darkblue;
 }

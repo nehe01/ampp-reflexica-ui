@@ -6,61 +6,64 @@
   Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div id="text-div">Select below of one option to process references<br/>
-  @Html.RadioButton("Text", "1", new { id = "insert-text"}) Insert Reference Text
-  @Html.RadioButton("Text", "2", new { id = "drop-file" }) Drop Files
-</div>
-<br/>
 
-<div id="input-text" hidden="True">
-  @Html.TextArea("TextReference", new { @class = "text-area" })
-</div>
-<br/>
+    <div id="text-div">
+      Select below of one option to process references<br />
+      @Html.RadioButton("Text", "1", new { id = "insert-text" }) Insert Reference Text
+      @Html.RadioButton("Text", "2", new { id = "drop-file" }) Drop Files
+    </div>
+    <br />
 
-<div id="drop-area" hidden="True">
-  Drop your files here
-</div>
-<br>
+    <div id="input-text" hidden="True">
+      @Html.TextArea("TextReference", new { @class = "text-area" })
+    </div>
+    <br />
 
-<div id="upload-file">
-  Uploaded Files:
-  <ul id="upload-result"></ul>
-</div>
-<br/>
+    <div id="drop-area" hidden="True">
+      Drop your files here
+    </div>
+    <br>
 
-<div id="output-format">
-  Output Format
-  <br/>
-  @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof (OutputFormat))), "Select Output Format")
-</div>
-<br/>
+    <div id="upload-file">
+      Uploaded Files:
+      <ul id="upload-result"></ul>
+    </div>
+    <br />
 
-<div id="style">
-  Style
-  <br />
-  @Html.DropDownList("Styles", new SelectList(Enum.GetValues(typeof(Styles))), "Select Style")
-</div>
-<br/>
+    <div id="output-format">
+      Output Format
+      <br />
+      @Html.DropDownList("OutputFormat", new SelectList(Enum.GetValues(typeof(OutputFormat))), "Select Output Format")
+    </div>
+    <br />
 
-<div id="customer">
-  Customer
-  <br />
-  @Html.DropDownList("Customers", new SelectList(Enum.GetValues(typeof(Customers))), "Select Customer")
-</div>
-<br/>
+    <div id="style">
+      Style
+      <br />
+      @Html.DropDownList("Styles", new SelectList(Enum.GetValues(typeof(Styles))), "Select Style")
+    </div>
+    <br />
 
-<div id="language">
-  Language
-  <br/>
-  @Html.DropDownList("Languages", new SelectList(Enum.GetValues(typeof (Languages))), "Select Language")
-</div>
-<br/>
+    <div id="customer">
+      Customer
+      <br />
+      @Html.DropDownList("Customers", new SelectList(Enum.GetValues(typeof(Customers))), "Select Customer")
+    </div>
+    <br />
+
+    <div id="language">
+      Language
+      <br />
+      @Html.DropDownList("Languages", new SelectList(Enum.GetValues(typeof(Languages))), "Select Language")
+    </div>
+    <br />
 
 <div id="reference-processing">
-  @using (Html.BeginForm())
+  @using (Html.BeginForm("Submit", "Home", FormMethod.Post))
   {
-    <input type="submit" name="Submit" value="Submit"/>
+    <input type="submit" name="Submit" value="Submit" />
   }
 </div>
+
 
 <div id="show"></div>

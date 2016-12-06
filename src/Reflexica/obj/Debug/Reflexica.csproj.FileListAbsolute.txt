@@ -13,4 +13,9 @@ D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.Mvc.xml
 D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Web.WebPages.Deployment.xml
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.dll
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.pdb
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Net.Http.Extensions.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Net.Http.Primitives.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Net.Http.Extensions.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Net.Http.Primitives.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.csproj.App.config
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.csprojResolveAssemblyReference.cache
