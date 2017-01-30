@@ -19,3 +19,15 @@ D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Net.Http.Extensions.xml
 D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Net.Http.Primitives.xml
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.csproj.App.config
 D:\ws\ampp-reflexica-ui\src\Reflexica\obj\Debug\Reflexica.csprojResolveAssemblyReference.cache
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Microsoft.Extensions.Logging.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Newtonsoft.Json.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\RestClient.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\RestSharp.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Microsoft.Extensions.Logging.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\Newtonsoft.Json.xml
+D:\ws\ampp-reflexica-ui\src\Reflexica\bin\RestSharp.xml

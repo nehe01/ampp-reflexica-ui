@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Reflexica.Models;
+using RestSharp;
 
 namespace Reflexica.Controllers
 {
@@ -42,13 +43,24 @@ namespace Reflexica.Controllers
       {
         try
         {
-          ClientCall();
+          ca();
           return  new JsonResult();
         }
         catch (Exception)
         {
           throw;
         }
+      }
+
+      private void ca()
+      {
+        var client = new RestClient("http://192.168.84.140/cgi-enabled/Reflexica.cgi");
+        var request = new RestRequest(Method.POST);
+        request.AddHeader("postman-token", "0a76f452-2211-1654-ff29-f24ab7a88378");
+        request.AddHeader("cache-control", "no-cache");
+        request.AddHeader("content-type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
+        request.AddParameter("multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW", "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"file\"; filename=\"index.html\"\r\nContent-Type: text/html\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"style\"\r\n\r\nBasic\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"Client\"\r\n\r\nSpringer\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"Language\"\r\n\r\nEn\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"Format\"\r\n\r\ncolor\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--", ParameterType.RequestBody);
+        IRestResponse response = client.Execute(request);
       }
 
       //...POST working fine
